@@ -17,8 +17,8 @@ export class Calculator extends Component {
 			tienBac5: 0,
 			tienBac6: 0
 		};
-		this.handleChange = this.handleChange.bind(this);
 		this.TinhToan = this.TinhToan.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 	handleChange(e) {
