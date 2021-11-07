@@ -24,7 +24,7 @@ export class Calculator extends Component {
 	handleChange(e) {
 		this.setState({
 			...this.state,
-			[e.target.name]: e.target.value
+			[e.target.name]: Number(e.target.value)
 		});
 	}
 
@@ -143,8 +143,10 @@ export class Calculator extends Component {
 				copied.bangGiaDien[5][1] = tieuThuMoiBac;
 				tieuThu = 400;
 			}
-			else
+			else {
 				copied.bangGiaDien[5][1] = 0;
+				copied.tienBac6 = 0;
+			}
 
 			if (tieuThu > 300) {
 				tieuThuMoiBac = tieuThu - 300;
@@ -152,8 +154,10 @@ export class Calculator extends Component {
 				copied.bangGiaDien[4][1] = tieuThuMoiBac;
 				tieuThu = 300;
 			}
-			else
+			else {
 				copied.bangGiaDien[4][1] = 0;
+				copied.tienBac5 = 0;
+			}
 
 			if (tieuThu > 200) {
 				tieuThuMoiBac = tieuThu - 200;
@@ -161,8 +165,10 @@ export class Calculator extends Component {
 				copied.bangGiaDien[3][1] = tieuThuMoiBac;
 				tieuThu = 200;
 			}
-			else
+			else {
 				copied.bangGiaDien[3][1] = 0;
+				copied.tienBac4 = 0;
+			}
 
 			if (tieuThu > 100) {
 				tieuThuMoiBac = tieuThu - 100;
@@ -170,8 +176,10 @@ export class Calculator extends Component {
 				copied.bangGiaDien[2][1] = tieuThuMoiBac;
 				tieuThu = 100;
 			}
-			else
+			else {
 				copied.bangGiaDien[2][1] = 0;
+				copied.tienBac3 = 0;
+			}
 
 			if (tieuThu > 50) {
 				tieuThuMoiBac = tieuThu - 50;
@@ -179,8 +187,10 @@ export class Calculator extends Component {
 				copied.bangGiaDien[1][1] = tieuThuMoiBac;
 				tieuThu = 50;
 			}
-			else
+			else {
 				copied.bangGiaDien[1][1] = 0;
+				copied.tienBac2 = 0;
+			}
 
 			copied.tienBac1 = tieuThu * copied.bangGiaDien[0][0];
 			copied.bangGiaDien[0][1] = tieuThu;
